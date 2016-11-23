@@ -20,8 +20,8 @@
 ##############################################################################
 
 {'name': 'Connector',
- 'version': '9.0.1.0.3',
- 'author': 'Camptocamp,Openerp Connector Core Editors,'
+ 'version': '10.0.1.0.0',
+ 'author': 'Camptocamp,Odoo Connector Core Editors,'
            'Odoo Community Association (OCA)',
  'website': 'http://odoo-connector.com',
  'license': 'AGPL-3',
@@ -40,6 +40,6 @@
           'setting_view.xml',
           'res_partner_view.xml',
           ],
- 'installable': False,
+ 'installable': True,
  'application': True,
  }

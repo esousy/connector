@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
         <!-- After installation of the module, open the related menu -->
@@ -16,7 +16,7 @@
             <field name="name">Connector Settings</field>
             <field name="model">connector.config.settings</field>
             <field name="arch" type="xml">
-                <form string="Configure Connector" version="7.0" class="oe_form_configuration">
+                <form string="Configure Connector" class="oe_form_configuration">
                     <header>
                         <button string="Apply" type="object" name="execute" class="oe_highlight"/>
                         or
@@ -44,5 +44,5 @@
             sequence="20" action="action_connector_config_settings"/>
 
     </data>
-</openerp>
+</odoo>
 

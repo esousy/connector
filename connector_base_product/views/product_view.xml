@@ -2,10 +2,10 @@
 
 <!--
     Copyright (C) 2013 Akretion (http://www.akretion.com/)
-    The licence is in the file __openerp__.py
+    The licence is in the file __odoo__.py
 -->
 
-<openerp>
+<odoo>
 <data>
 
 <!--This is a product inherited form that will be dynamically populated-->
@@ -40,4 +40,4 @@
 
 
 </data>
-</openerp>
+</odoo>
