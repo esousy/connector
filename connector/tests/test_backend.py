@@ -4,11 +4,11 @@ import unittest
 
 import odoo.tests.common as common
 from odoo.addons.connector.backend import (Backend,
-                                              get_backend,
-                                              BACKENDS)
+                                           get_backend,
+                                           BACKENDS)
 from odoo.addons.connector.exception import NoConnectorUnitError
 from odoo.addons.connector.connector import (Binder,
-                                                ConnectorUnit)
+                                             ConnectorUnit)
 from odoo.addons.connector.unit.mapper import ExportMapper
 from odoo.addons.connector.unit.backend_adapter import BackendAdapter
 from odoo.addons.connector.session import ConnectorSession
@@ -140,8 +140,8 @@ class test_backend_register(common.TransactionCase):
             _model_name = 'res.users'
 
         # trick the origin of the class, let it think
-        # that it comes from the Odoo module 'not installed module'
-        LambdaNoUnit._odoo_module_ = 'not installed module'
+        # that it comes from the odoo module 'not installed module'
+        LambdaNoUnit._module = 'not installed module'
         self.backend(LambdaNoUnit)
 
         matching_cls = self.backend.get_class(LambdaUnit,
@@ -182,7 +182,7 @@ class test_backend_register(common.TransactionCase):
 
         # trick the origin of the class, let it think
         # that it comes from the Odoo module 'not installed module'
-        LambdaNoUnit._odoo_module_ = 'not installed module'
+        LambdaNoUnit._module = 'not installed module'
         self.backend(LambdaNoUnit, replacing=LambdaYesUnit)
 
         matching_cls = self.backend.get_class(LambdaUnit,

@@ -71,8 +71,7 @@ class RunJobController(http.Controller):
     @http.route('/connector/runjob', type='http', auth='none')
     def runjob(self, db, job_uuid, **kw):
 
-        session_hdl = ConnectorSessionHandler(db,
-                                              odoo.SUPERUSER_ID)
+        session_hdl = ConnectorSessionHandler(db, odoo.SUPERUSER_ID)
 
         def retry_postpone(job, message, seconds=None):
             with session_hdl.session() as session:

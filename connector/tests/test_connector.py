@@ -31,9 +31,9 @@ def mock_connector_unit(env):
 class ConnectorHelpers(unittest.TestCase):
 
     def test_odoo_module_name(self):
-        name = connector._get_odoo_module_name('odoo.addons.sale')
+        name = connector._get_addon_name('odoo.addons.sale')
         self.assertEqual(name, 'sale')
-        name = connector._get_odoo_module_name('sale')
+        name = connector._get_addon_name('sale')
         self.assertEqual(name, 'sale')
 
 
